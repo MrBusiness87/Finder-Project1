@@ -25,9 +25,39 @@
       </div>
     </nav>
 
-    <div class="weather card">
-      <a id="city-name current-temp current icon">Weather</a>
-    </div>
+    <!--Widget-->
+    <a
+      class="weatherwidget-io"
+      href="https://forecast7.com/en/35d78n78d64/raleigh/?unit=us"
+      data-label_1="RALEIGH"
+      data-label_2="WEATHER"
+      data-days="3"
+      data-theme="pillows"
+      >RALEIGH WEATHER</a
+    >
+    <script>
+      !(function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://weatherwidget.io/js/widget.min.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      })(document, "script", "weatherwidget-io-js");
+    </script>
+<!--End Widget-->
+<br>
+<!--Open Weather-->
+<div class="container">
+  <div class="nav-wrapper">
+      <div class="col l4 time"></div>
+      <div class="col l4 weather"></div>
+<!--End Open Weather-->
+
+
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
@@ -40,3 +70,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   </body>
 </html>
+
+test
