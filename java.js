@@ -1,60 +1,42 @@
 //-- Google Maps API Key
-var APIkey = "AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc";
+var APImapkey = "AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc";
 
-// Weather
-function populateCityWeather(city, citySearchList) {
-    createCityList(citySearchList);
-  
-    // Current weather
-    let queryURL =
-      "https://api.openweathermap.org/data/2.5/weather?q=" +
+//Google Maps embed
+
+function initMap(lat, lng, targetIndex) {
+  // The location of event
+  var latlng = new google.maps.LatLng(lat, lng);
+  // The map, centered at city venue
+  console.log(document.getElementById(`map${targetIndex}`));
+  var map = new google.maps.Map(document.getElementById(`map${targetIndex}`), {
+      zoom: 8,
+      center: latlng
+  });
+  // The marker, positioned at event venue
+  var marker = new google.maps.Marker({
+      position: latlng,
+      map: map
+  });
+}
+
+function embedTheMap(index) {
+  var queryURL =
+      "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=sport&city=" +
       city +
-      "&appid=33076c7235c2a39d07b0fde1994a80b1&units=imperial";
-    // Forecast
-    let queryURL2 =
-      "https://api.openweathermap.org/data/2.5/forecast?q=" +
-      city +
-      "&appid=33076c7235c2a39d07b0fde1994a80b1&units=imperial";
-  
-    let latitude;
-  
-    let longitude;
-  
-    $.ajax({
+      "&apikey=" +
+      APIticketkey;
+
+  $.ajax({
       url: queryURL,
-      method: "GET",
-    })
-      // Stores data into "weather"
-      .then(function (weather) {
-        // Log the queryURL
-        console.log(queryURL);
-  
-        // Log the resulting object
-        console.log(weather);
-  
-        let nowMoment = moment();
-  
-        let displayMoment = $("<h3>");
-        $("#city-name").empty();
-        $("#city-name").append(
-          displayMoment.text("(" + nowMoment.format("M/D/YYYY") + ")")
-        );
-  
-        let cityName = $("<h3>").text(weather.name);
-        $("#city-name").prepend(cityName);
-  
-        let weatherIcon = $("<img>");
-        weatherIcon.attr(
-          "src",
-          "https://openweathermap.org/img/w/" + weather.weather[0].icon + ".png"
-        );
-        $("#current-icon").empty();
-        $("#current-icon").append(weatherIcon);
-  
-        $("#current-temp").text("Temperature: " + weather.main.temp + " °F");
-        $("#current-humidity").text("Humidity: " + weather.main.humidity + "%");
-        $("#current-wind").text("Wind Speed: " + weather.wind.speed + " MPH");
-  
-        latitude = weather.coord.lat;
-        longitude = weather.coord.lon;
-        })
+      method: "GET"
+  }).then(function(response) {
+      var venue = response._embedded.events[index]._embedded.venues[0];
+      var latitude = venue.location.latitude;
+      var longitude = venue.location.longitude;
+
+      var lat = parseFloat(latitude);
+      var lng = parseFloat(longitude);
+      console.log("Lat & Lng", lat, lng);
+      initMap(lat, lng, index);
+  });
+}
