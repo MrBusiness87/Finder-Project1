@@ -1,3 +1,12 @@
-#weather {
-  margin-bottom: 10rem;
-}
+#city-list {
+    width: 22rem;
+  }
+  
+  #city-date-icon,
+  #city-name,
+  #current-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center/space-around/space-between;
+  }
+  

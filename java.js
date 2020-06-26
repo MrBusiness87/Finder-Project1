@@ -57,4 +57,4 @@ function populateCityWeather(city, citySearchList) {
   
         latitude = weather.coord.lat;
         longitude = weather.coord.lon;
-      });
+        })
