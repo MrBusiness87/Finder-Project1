@@ -2,41 +2,85 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Sports Finder</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Finder CONTACTS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<h1 style="color: black; font-weight: bold; margin-top: 20px;">&emsp;CONTACT US:</h1>
-<div class="col s12">
 
-  <body class="c-body" style="background-image: url('#'); background-size: cover; background-position: center;">
+<body class="c-body"
+  style="background-color: lightgray; background-image: url('#'); background-size: cover; background-position: center;">
+  <nav>
+    <div class="nav-wrapper black">
+      <a href="index.html" class="brand-logo center">SPORTS FINDER</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <div class='temp'></div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <h1 style="color: black; font-weight: 900;text-align: center;">{[(CONTACT US)]}</h1>
+  <div class="col s12">
+
+
     <form style="font-size: 30px;">
+      <br>
       <div class="row">
         <div class="form-group col s8 offset-s2">
-          <label for="Your Name" style="color: white; font-weight: bold;">&emsp;Name</label>
+          <label for="Your Name" style="color: black; font-weight: bold; font-size: 30px;">&emsp;Name</label>
           <input type="text" class="form-control" id="Your Name" placeholder="Your Name">
         </div>
       </div>
+      <br>
       <div class="row">
         <div class="form-group col s8 offset-s2">
-          <label for="Email" style="color: white; font-weight: bold;">&emsp;Email</label>
+          <label for="Email" style="color: black; font-weight: bold; font-size: 30px;">&emsp;Email</label>
           <input type="email" class="form-control" id="Email" placeholder="tag@email.com">
         </div>
       </div>
+      <br>
       <div class="row">
         <div class="form-group col s8 offset-s2">
-          <label for="Message" style="color: white; font-weight: bold;">&emsp;Message</label>
+          <label for="Message" style="color: black; font-weight: bold; font-size: 30px;">&emsp;Message</label>
           <textarea class="form-control" id="Message" rows="3"></textarea>
         </div>
       </div>
+      <br>
       <div class="row">
         <div class="form-group col s8 offset-s2">
-          <button type="button" class="btn btn-primary">SUBMIT</button>
+          <button type="button" class="btn btn-primary"
+            style="color: black; font-size: 30px; float:right;">SUBMIT</button>
         </div>
       </div>
+      <br>
     </form>
-  </body>
-</div>
+  </div>
+</body>
+
+
+<footer class="page-footer black" style="text-align: center;">
+  <div class="footer-copyright">
+    <div class="container">
+      © 2020 Copyright
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc">
+</script>
+<script src="java.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 
 </html>
