@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sports Finder</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="i-body" style="
@@ -16,32 +16,32 @@
       background-size: cover;
       background-position: center;
     ">
-  <!-- navigation bar -->
-  <nav>
-    <div class="nav-wrapper black">
-      <a href="index.html" class="brand-logo center">SPORTS FINDER</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
+    <!-- navigation bar -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.html" class="brand-logo center">SPORTS FINDER</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- side navigation bar -->
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <div class="temp"></div>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- side navigation bar -->
-  <ul class="sidenav" id="mobile-demo">
-    <li>
-      <div class="temp"></div>
-    </li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <!--Weather-->
-  <div class="weather" style="text-align: center;"></div>
-  <!-- initial search area -->
-  <div class="container" style="background-color: gray;">
-    <div class="row">
-      <br />
-      <form class="col s12">
+    </ul>
+    <!--Weather-->
+    <div class="weather" style="text-align: center;"></div>
+    <!-- initial search area -->
+    <div class="container" style="background-color: gray;">
+        <div class="row top">
+            <br />
+            <!--<form class="col s12">
         <div class="input-field col s6">
           <input placeholder="Placeholder" id="sportName" type="text" class="validate" />
           <label class="input-label" for="sportName" style="font-size: 20px; color: white;">What Sport</label>
@@ -58,27 +58,39 @@
             Search
           </button>
         </div>
-      </form>
+      </form-->
+            <div class="search-area">
+
+                <div class="input-field">
+
+                    <textarea id="cityName" class="materialize-textarea" placeholder="Enter the city name to find the sporting events"></textarea>
+                    <button class="btn waves-effect waves-light" type="submit" name="action"><i
+                    class="fas fa-search"></i>
+                Search
+            </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row"></div>
-  <!-- AREA FOR TICKET MASTER API TO DISPLAY -->
+    <div class="row"></div>
+    <!-- AREA FOR TICKET MASTER API TO DISPLAY -->
 
-  <!-- bottom of page -->
-  <footer class="page-footer black" style="text-align: center;">
-    <div class="footer-copyright">
-      <div class="container">
-        © 2020 Copyright
-      </div>
-    </div>
-  </footer>
+    <!-- bottom of page -->
+    <footer class="page-footer black" style="text-align: center;">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright
+            </div>
+        </div>
+    </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc">
-  </script>
-  <script src="java.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="java.js"></script>
+
 </body>
 
 </html>
