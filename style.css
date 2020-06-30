@@ -26,3 +26,62 @@ footer {
 .top {
     margin-top: 75px;
 }
+
+
+/*.search-area {
+    padding-left: 28%;
+    padding-right: 28%;
+    padding-bottom: 28%;
+    padding-top: 20%;
+}*/
+
+.btn,
+.btn-results {
+    background-color: #2f95c4;
+    opacity: 80%;
+    height: 45px;
+    align-content: center;
+}
+
+.event-card {
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    opacity: 80%;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+    border: 1 px black solid;
+    margin-left: 10px;
+}
+
+a#tix :hover {
+    text-decoration: underline;
+    display: inline-flex;
+}
+
+a.logo {
+    color: white;
+}
+
+.map {
+    width: 400px;
+    height: 400px;
+    background-color: grey;
+    display: inline-flex;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.date-info {
+    font-size: 14px;
+    font-weight: bold;
+}
