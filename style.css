@@ -1,8 +1,31 @@
+.i-body,
+.a-body,
+.c-body {
+    background-image: url("./Assets/Sport\ Background1.jpg");
+}
+
 .a-body,
 .c-body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+.search-area {
+    color: white;
+    background-image: url("./Assets/images.jpg");
+    background-size: cover;
+    background-position: center;
+    padding-left: 28%;
+    padding-right: 28%;
+    padding-bottom: 10px;
+    padding-top: 2px;
+}
+
+span {
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
 }
 
 #city-list {
@@ -26,14 +49,6 @@ footer {
 .top {
     margin-top: 75px;
 }
-
-
-/*.search-area {
-    padding-left: 28%;
-    padding-right: 28%;
-    padding-bottom: 28%;
-    padding-top: 20%;
-}*/
 
 .btn,
 .btn-results {
@@ -70,9 +85,6 @@ a.logo {
 }
 
 .map {
-    width: 400px;
-    height: 400px;
-    background-color: grey;
     display: inline-flex;
 }
 
@@ -84,4 +96,28 @@ a.logo {
 .date-info {
     font-size: 14px;
     font-weight: bold;
+}
+
+.weather {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: white;
+    height: 8 0px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+
+.brand-logo {
+    font-size: 120px;
+    font-weight: 900;
 }
