@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
     var instances = M.Sidenav.init(elems);
 });
@@ -9,7 +9,7 @@ var APImapkey = "AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc";
 
 function currentlocationWeather() {
     let apiKey = "33076c7235c2a39d07b0fde1994a80b1";
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function (position) {
         longitude = position.coords.longitude;
         latitude = position.coords.latitude;
         console.log(longitude);
@@ -23,7 +23,7 @@ function currentlocationWeather() {
         $.ajax({
             url: queryURL,
             method: "GET",
-        }).then(function(response) {
+        }).then(function (response) {
             console.log(response);
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -38,11 +38,10 @@ function currentlocationWeather() {
             var city1 = $(".weather").append(
                 "<div>" +
                 response.name +
-                "<br>Temp: " +
+                "&ensp;Temp: " +
                 ((response.main.temp - 273.15) * 1.8 + 32).toFixed(1) +
-                "&#8457 <img id='wicon' src='' alt='Weather icon'></div>"
+                "&#8457 <img id='wicon' src='' alt='Weather icon' style='height: 3.5%; width: 3.5%;'></div>"
             );
-            // city1.append("<img id='wicon' src='' alt='Weather icon'>");
 
             $("#wicon").attr("src", iconurl);
         });
@@ -64,7 +63,7 @@ function cityWeather() {
             method: "GET",
         })
         // We store all of the retrieved data inside of an object called "response"
-        .then(function(response) {
+        .then(function (response) {
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
 
@@ -78,9 +77,9 @@ function cityWeather() {
             var city2 = $(".weather").html(
                 "<div>" +
                 response.name +
-                "<br>Temp: " +
+                "&ensp;Temp: " +
                 ((response.main.temp - 273.15) * 1.8 + 32).toFixed(1) +
-                "&#8457<img id='wicon' src='' alt='Weather icon'></div>"
+                "&#8457<img id='wicon' src='' alt='Weather icon' style='height: 3.5%; width: 3.5%;'></div>"
             );
             //city2.append("<img id='wicon' src='' alt='Weather icon'>");
 
@@ -117,7 +116,7 @@ function embedTheMap(index) {
     $.ajax({
         url: queryURL,
         method: "GET",
-    }).then(function(response) {
+    }).then(function (response) {
         var venue = response._embedded.events[index]._embedded.venues[0];
         var latitude = venue.location.latitude;
         var longitude = venue.location.longitude;
@@ -151,7 +150,7 @@ function ticketEvents() {
     $.ajax({
         url: queryURL,
         method: "GET",
-    }).then(function(response) {
+    }).then(function (response) {
         console.log(response);
         console.log(response._embedded.events.length);
 
@@ -172,7 +171,7 @@ function ticketEvents() {
             card.append(rightColumn);
 
             rightColumn.append(
-                `<div id='map${i}' style='width: 260px; height: 270px' class='map'>`
+                `<div id='map${i}' style='width: 200px; height: 200px' class='map'>`
             );
             embedTheMap(i);
 
@@ -227,7 +226,7 @@ function ticketEvents() {
             let eventUrlEl = $(
                 "<a target='_blank' class='tixlink' id='tix' href=" +
                 event.url +
-                ">Click here to purchase tickets!</a>"
+                "><br>Click here to purchase tickets!</a>"
             );
 
             let genre = event.classifications[0].genre.name;
@@ -267,12 +266,8 @@ function ticketEvents() {
     });
 }
 
-$(".btn").on("click", function() {
+$(".btn").on("click", function () {
     //console.log("I CLICKED THE BUTTON");
-    $(".search-area").removeClass();
-
-    $(".search-area").addClass("btn-results");
-
     const cityInput = $("#cityName");
     $(".event-data").empty();
     const myCity = cityInput.val();

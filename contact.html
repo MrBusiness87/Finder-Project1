@@ -1,3 +1,9 @@
+<?php
+if($_POST["message"]) {
+mail("bbartula87@gmail.com", "MESSAGE INQUIRY FROM SPORT FINDER APP",
+$_POST["insert your message here"]. "From: customer@sportfinder.com");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +16,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="c-body"
-  style="background-color: lightgray; background-image: url('#'); background-size: cover; background-position: center;">
+<body class="c-body">
   <nav>
     <div class="nav-wrapper black">
       <a href="index.html" class="brand-logo center">SPORTS FINDER</a>
@@ -23,52 +28,38 @@
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
+  <ul class="sidenav black" id="mobile-demo">
     <li>
-      <div class='temp'></div>
+      <div class="weather" style="color:white;"></div>
     </li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li class="divider"></li>
+    <li><a href="about.html" style="color: white;">About</a></li>
+    <li><a href="contact.html" style="color: white;">Contact</a></li>
   </ul>
-  <h1 style="color: black; font-weight: 900;text-align: center;">{[(CONTACT US)]}</h1>
+  <h1 style="font-weight: 900;text-align: center; color: white;">{[(CONTACT US)]}</h1>
   <div class="col s12">
-
-
-    <form style="font-size: 30px;">
-      <br>
-      <div class="row">
-        <div class="form-group col s8 offset-s2">
-          <label for="Your Name" style="color: black; font-weight: bold; font-size: 30px;">&emsp;Name</label>
-          <input type="text" class="form-control" id="Your Name" placeholder="Your Name">
-        </div>
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <form action=”mailto:bbartula87@gmail.com” method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+          <span>Name:</span>
+          <br>
+          <input type=”text” size=”40″ name=”ContactName”><br><br>
+          <span>Message:</span>
+          <br>
+          <textarea name=”ContactCommentt” rows=”10″ cols=”10″></textarea>
+          <br><br>
+          <button class="btn waves-effect waves-light black" type="submit" name="action" style="float: right;">
+            <i class="fas fa-search"></i>
+            SUBMIT INQUIRY
+          </button>
+        </form>
       </div>
-      <br>
-      <div class="row">
-        <div class="form-group col s8 offset-s2">
-          <label for="Email" style="color: black; font-weight: bold; font-size: 30px;">&emsp;Email</label>
-          <input type="email" class="form-control" id="Email" placeholder="tag@email.com">
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="form-group col s8 offset-s2">
-          <label for="Message" style="color: black; font-weight: bold; font-size: 30px;">&emsp;Message</label>
-          <textarea class="form-control" id="Message" rows="3"></textarea>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="form-group col s8 offset-s2">
-          <button type="button" class="btn btn-primary"
-            style="color: black; font-size: 30px; float:right;">SUBMIT</button>
-        </div>
-      </div>
-      <br>
-    </form>
+    </div>
   </div>
 </body>
-
-
+<!-- IMAGE FREE DOWNLOAD FROM GMAIL -->
+<img src="./Assets/envelope1.png"
+  style="width: 500px; height: 400px; background-color: transparent; text-align: center; margin-left: auto; margin-right: auto;">
 <footer class="page-footer black" style="text-align: center;">
   <div class="footer-copyright">
     <div class="container">
@@ -77,10 +68,9 @@
   </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc">
 </script>
-<script src="java.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="script.js"></script>
 
 </html>
