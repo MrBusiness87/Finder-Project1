@@ -40,6 +40,12 @@ span {
     justify-content: center/space-around/space-between;
 }
 
+#wicon {
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
