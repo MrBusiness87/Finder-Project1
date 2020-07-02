@@ -1,129 +1,129 @@
 .i-body,
 .a-body,
 .c-body {
-    background-image: url("./Assets/SportBackground1.jpg");
+  background-image: url("./Assets/SportBackground1.jpg");
 }
 
 .a-body,
 .c-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .search-area {
-    color: white;
-    background-image: url("./Assets/images.jpg");
-    background-size: cover;
-    background-position: center;
-    padding-left: 28%;
-    padding-right: 28%;
-    padding-bottom: 10px;
-    padding-top: 2px;
+  color: white;
+  background-image: url("./Assets/images.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-left: 28%;
+  padding-right: 28%;
+  padding-bottom: 10px;
+  padding-top: 2px;
 }
 
 span {
-    font-size: 30px;
-    color: white;
-    font-weight: 900;
+  font-size: 30px;
+  color: white;
+  font-weight: 900;
 }
 
 #city-list {
-    width: 22rem;
+  width: 22rem;
 }
 
 #city-date-icon,
 #city-name,
 #current-icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: center/space-around/space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: center/space-around/space-between;
 }
 
 #wicon {
-    width: 35px;
-    height: 35px;
-    margin: 0px;
+  width: 35px;
+  height: 35px;
+  margin: 0px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .top {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 
 .btn,
 .btn-results {
-    background-color: #2f95c4;
-    opacity: 80%;
-    height: 45px;
-    align-content: center;
+  background-color: #2f95c4;
+  opacity: 80%;
+  height: 45px;
+  align-content: center;
 }
 
 .event-card {
-    background-color: white;
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 10px;
-    opacity: 80%;
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px;
+  opacity: 80%;
 }
 
 img {
-    width: 150px;
-    height: 100px;
-    border: 1 px black solid;
-    margin-left: 10px;
+  width: 150px;
+  height: 100px;
+  border: 1 px black solid;
+  margin-left: 10px;
 }
 
 a#tix :hover {
-    text-decoration: underline;
-    display: inline-flex;
+  text-decoration: underline;
+  display: inline-flex;
 }
 
 a.logo {
-    color: white;
+  color: white;
 }
 
 .map {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .event-title {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .date-info {
-    font-size: 14px;
-    font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .weather {
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
 }
 
 input,
 textarea {
-    width: 100%;
-    background-color: white;
-    height: 8 0px;
-    font-size: 30px;
-    font-weight: 900;
-    color: white;
+  width: 100%;
+  background-color: white;
+  height: 8 0px;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
 }
 
 .brand-logo {
-    font-size: 120px;
-    font-weight: 900;
+  font-size: 100px;
+  font-weight: 900;
 }
