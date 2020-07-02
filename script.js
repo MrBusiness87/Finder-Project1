@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     var elems = document.querySelectorAll(".sidenav");
     var instances = M.Sidenav.init(elems);
 });
@@ -9,7 +9,7 @@ var APImapkey = "AIzaSyBb0CDUuXsKE2EwQDS79oQZXtUoAA77HXc";
 
 function currentlocationWeather() {
     let apiKey = "33076c7235c2a39d07b0fde1994a80b1";
-    navigator.geolocation.getCurrentPosition(function (position) {
+    navigator.geolocation.getCurrentPosition(function(position) {
         longitude = position.coords.longitude;
         latitude = position.coords.latitude;
         console.log(longitude);
@@ -23,7 +23,7 @@ function currentlocationWeather() {
         $.ajax({
             url: queryURL,
             method: "GET",
-        }).then(function (response) {
+        }).then(function(response) {
             console.log(response);
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -50,6 +50,7 @@ function currentlocationWeather() {
 currentlocationWeather();
 
 function cityWeather() {
+    console.log("Entering CITY WEATHER:", city);
     let apiKey = "33076c7235c2a39d07b0fde1994a80b1";
     var queryURL =
         "http://api.openweathermap.org/data/2.5/weather?q=" +
@@ -60,32 +61,33 @@ function cityWeather() {
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
             url: queryURL,
-            method: "GET",
+            method: "GET"
         })
-        // We store all of the retrieved data inside of an object called "response"
-        .then(function (response) {
+        //Store all of the retrieved data inside of an object called "response"
+        .then(function(response) {
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-
-            // Log the queryURL
+            console.log('ICON URL!!!', iconurl)
+            console.log('ICON code!!!', iconcode)
+                // Log the queryURL
             console.log(queryURL);
-
             // Log the resulting object
-            console.log(response);
+            console.log('Weather Response!!!', response);
             $(".weather").empty();
             // Transfer content to HTML
             var city2 = $(".weather").html(
                 "<div>" +
                 response.name +
-                "&ensp;Temp: " +
+                "<br>Temp: " +
                 ((response.main.temp - 273.15) * 1.8 + 32).toFixed(1) +
-                "&#8457<img id='wicon' src='' alt='Weather icon' style='height: 3.5%; width: 3.5%;'></div>"
+                "&#8457 <img id='wicon' src='' alt='Weather icon'></div>"
             );
             //city2.append("<img id='wicon' src='' alt='Weather icon'>");
-
+            console.log('Going to set weather icon!!!');
             $("#wicon").attr("src", iconurl);
-            cityWeather();
+            console.log('Done!!!', );
         });
+
 }
 
 function initMap(lat, lng, targetIndex) {
@@ -116,7 +118,7 @@ function embedTheMap(index) {
     $.ajax({
         url: queryURL,
         method: "GET",
-    }).then(function (response) {
+    }).then(function(response) {
         var venue = response._embedded.events[index]._embedded.venues[0];
         var latitude = venue.location.latitude;
         var longitude = venue.location.longitude;
@@ -150,7 +152,7 @@ function ticketEvents() {
     $.ajax({
         url: queryURL,
         method: "GET",
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response);
         console.log(response._embedded.events.length);
 
@@ -266,7 +268,7 @@ function ticketEvents() {
     });
 }
 
-$(".btn").on("click", function () {
+$(".btn").on("click", function() {
     //console.log("I CLICKED THE BUTTON");
     const cityInput = $("#cityName");
     $(".event-data").empty();
@@ -274,5 +276,6 @@ $(".btn").on("click", function () {
     city = myCity;
     console.log("CITY:", city);
     ticketEvents();
+    console.log("CALLING CITY WEATHER:", city);
     cityWeather();
 });
