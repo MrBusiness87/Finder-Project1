@@ -8,10 +8,10 @@
 
 
 # Project Name: Finder-Project1
-# Title: Sprorts Finder
+# Title: Sports Finder
 
 # Introduction:   
-Create an sports finder application that allows the user to enter the City to find sports events near city
+Create a sports finder application in a group that allows the user to enter the City to find sports events near city
 
 # Technologies: 
 HTML, CSS, Javascript, AJAX, jquery, Materialize, Openweathermap and Ticket master APIs
@@ -33,6 +33,12 @@ Developed the site with the following features:
   * Displays sports events with date, time, venue, and map of the sports event
   * User can purchase tickets using the provided link
   * Display weather of the city that user entered
+
+
+
+
+
+
     
 
 Used HTML validation service to ensure that each page has valid HTML.
