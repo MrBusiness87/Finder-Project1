@@ -41,7 +41,7 @@ function currentlocationWeather() {
           response.name +
           "&ensp;Temp: " +
           ((response.main.temp - 273.15) * 1.8 + 32).toFixed(1) +
-          "&#8457 <img id='wicon' src='' alt='' style='height: 3.5%; width: 3.5%;'></div>"
+          "&#8457 <img id='' src='' alt='' style='height: 3.5%; width: 3.5%;'></div>"
       );
 
       $("#wicon").attr("src", iconurl);
@@ -81,7 +81,7 @@ function cityWeather() {
           response.name +
           "<br>Temp: " +
           ((response.main.temp - 273.15) * 1.8 + 32).toFixed(1) +
-          "&#8457 <img id='wicon' src='' alt=''></div>"
+          "&#8457 <img id='' src='' alt=''></div>"
       );
       //city2.append("<img id='wicon' src='' alt='Weather icon'>");
       console.log("Going to set weather icon!!!");
