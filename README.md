@@ -29,7 +29,8 @@ Developed the site with the following features:
   * Used two server-side APIs - Openweathermap and Ticketmaster
   * Used one third-party API - materialize.min.js
   * Interactive app which accepts user input 
-  * Displays sports events with date, time, venue, and map of the sports event in the same page when the user enters a city in the search box
+  * Displays the sports events with date, time, venue, and map of the sports event. 
+
   * User can purchase tickets using the provided link in the sports event details
   * Display weather of the city that the user entered
   
